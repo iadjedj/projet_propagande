@@ -6,7 +6,7 @@
 /*   By: iadjedj <iadjedj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/02 16:06:11 by iadjedj           #+#    #+#             */
-/*   Updated: 2015/02/03 20:55:42 by iadjedj          ###   ########.fr       */
+/*   Updated: 2015/02/03 23:02:35 by iadjedj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,7 @@ char	*get_word(char *word)
 	{
 		j = 0;
 		while (word[j] && DICO[i][j] != '=' && DICO[i][j] == word[j])
-		{
 			j++;
-		}
 		if (word[j] == '\0')
 			return (DICO[i]);
 		i++;
@@ -43,7 +41,7 @@ char	*get_word(char *word)
 	return (NULL);
 }
 
-float		get_freq(char *str)
+double	get_freq(char *str)
 {
 	int		i;
 	int		j;
@@ -53,9 +51,7 @@ float		get_freq(char *str)
 	{
 		j = 0;
 		while (str[j] && FREQ[i][j] != '\t' && FREQ[i][j] == str[j])
-		{
 			j++;
-		}
 		if (str[j] == '\0')
 			break;
 		i++;
@@ -63,10 +59,10 @@ float		get_freq(char *str)
 	if (FREQ[i] == NULL)
 		return (0);
 	else
-		return (atof(ft_strchr(FREQ[i], '\t')));
+		return (strtod(ft_strchr(FREQ[i], '\t'), NULL));
 }
 
-char		*find_syn(char *word)
+char	*find_syn(char *word)
 {
 	char			*tmp;
 	char			**syn;
@@ -81,9 +77,7 @@ char		*find_syn(char *word)
 	while (syn && syn[i])
 	{
 		if (get_freq(syn[i]) > get_freq(word) && strlen(syn[i]) <= len)
-		{
 			return (syn[i]);
-		}
 		free(syn[i]);
 		i++;
 	}
@@ -91,18 +85,50 @@ char		*find_syn(char *word)
 	return (word);
 }
 
+int		ft_strlen_spe(char *str)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (*str)
+	{
+		if (*str > 0)
+		{
+			i++;
+		}
+		else if (*str < 0 && j == 0)
+			j = 1;
+		else
+		{
+			j = 0;
+			i++;
+		}
+		str++;
+	}
+	return (i);
+}
+
 void	censure(char *mot)
 {
 	int		len;
 
-	len = (strlen(mot) % 12) + 2;
-	// ft_putstr("\033[31m");
+	len = ft_strlen_spe(mot);
+	ft_putstr(mot);
+	ft_putnchar('\b', len);
+	// ft_putstr("\033[37;40m");
 	while (len--)
-		ft_putstr("█");
-	ft_putstr("\033[0m ");
+	{
+		usleep(40000);
+		ft_putchar(' ');
+	}
+	ft_putnchar(' ', len);
+	// ft_putstr("\033[0m");
+	ft_putchar(' ');
 }
 
-int main(int ac, char const **av)
+int 	main(int ac, char const **av)
 {
 	int fd;
 	int i;
@@ -126,9 +152,8 @@ int main(int ac, char const **av)
 			{
 				if ((int)strlen(tmp) < (rand() % 10) + 5)
 				{
-					ft_putstr("\033[32m");
 					ft_putstr(tmp);
-					ft_putstr("\033[0m ");
+					ft_putchar(' ');
 				}
 				else
 					censure(tab[i]);
@@ -142,6 +167,7 @@ int main(int ac, char const **av)
 				censure(tab[i]);
 			free(tab[i]);
 			i++;
+			usleep(40000);
 		}
 		ft_putchar('\n');
 		free(tab);
