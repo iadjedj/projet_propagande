@@ -6,7 +6,7 @@
 /*   By: iadjedj <iadjedj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 01:28:53 by iadjedj           #+#    #+#             */
-/*   Updated: 2015/02/04 02:07:58 by iadjedj          ###   ########.fr       */
+/*   Updated: 2015/02/04 02:58:53 by iadjedj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char *SMS[300] =
 	"après-Midi=aprè-mi10",
 	"arrêter=aréT",
 	"arriver=ariV",
+	"au=o",
+	"aux=o",
 	"aucun=ok1",
 	"aucune=oQne",
 	"aujourd'hui=Ojourd'8",
@@ -163,7 +165,7 @@ char *SMS[300] =
 	"laisser=LC",
 	"magasin=magaz1",
 	"maintenant=mnt",
-	"mais=mè",
+	"mais=mé",
 	"maison=kaze",
 	"malade=malad",
 	"malin=mal1",

@@ -6,7 +6,7 @@
 /*   By: iadjedj <iadjedj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/02 16:06:11 by iadjedj           #+#    #+#             */
-/*   Updated: 2015/02/04 02:02:45 by iadjedj          ###   ########.fr       */
+/*   Updated: 2015/02/04 02:55:49 by iadjedj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,17 @@ char	*find_syn(char *word)
 
 char	*find_sms(char *word)
 {
-	int		i;
 	char	**tmp;
+	int		size;
+	int		i;
 
+	size = strlen(word);
 	i = 0;
+	if (word[size - 1] == 's' || word[size - 1] == '.' || word[size - 1] == ',')
+	{
+		word[size - 1] = '\0';
+		size--;
+	}
 	while (SMS[i] != NULL)
 	{
 		tmp = ft_strsplit(SMS[i], '=');
