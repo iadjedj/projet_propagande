@@ -6,13 +6,13 @@
 #    By: iadjedj <iadjedj@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/21 13:29:21 by iadjedj           #+#    #+#              #
-#    Updated: 2015/02/02 17:05:37 by iadjedj          ###   ########.fr        #
+#    Updated: 2015/02/04 00:49:43 by iadjedj          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	propagande
 
-SRCS	= 	main.c get_next_line.c
+SRCS	= 	main.c utils.c get_next_line.c
 
 OBJS	=	$(SRCS:.c=.o)
 
