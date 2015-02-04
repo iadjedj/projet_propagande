@@ -6,14 +6,14 @@
 /*   By: iadjedj <iadjedj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 01:28:53 by iadjedj           #+#    #+#             */
-/*   Updated: 2015/02/04 02:58:53 by iadjedj          ###   ########.fr       */
+/*   Updated: 2015/02/04 13:02:13 by iadjedj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SMS_H
 # define SMS_H
 
-char *SMS[300] =
+char*SMS[300] =
 {
 	"accro=akro",
 	"acheter=HT",
@@ -21,7 +21,7 @@ char *SMS[300] =
 	"age=aJ",
 	"agé=aG",
 	"aider=é'D",
-	"aller=go, alé",
+	"aller=alé",
 	"aller-retour=AR",
 	"apéro=aPro",
 	"après=aprè",
@@ -37,7 +37,6 @@ char *SMS[300] =
 	"avant=avan",
 	"avancer=avanC",
 	"avec=avc",
-	"ayé=ça y est",
 	"balader=balaD",
 	"bavarder=bavarD",
 	"bien=bi1",
@@ -76,7 +75,7 @@ char *SMS[300] =
 	"concert=koncR",
 	"contester=kontST",
 	"coquin=cok1",
-	"coucou=cc kikou",
+	"coucou=cc",
 	"cruel=kruL",
 	"cul=Q",
 	"d'accord=dak",
@@ -91,7 +90,7 @@ char *SMS[300] =
 	"des=dê",
 	"descends=dS100",
 	"désespéré=DzSPré",
-	"désolé=Dzolé dsl",
+	"désolé=dsl",
 	"détester=DtST",
 	"devant=2van",
 	"dictionnaire=10ko",
@@ -143,7 +142,7 @@ char *SMS[300] =
 	"idée=ID",
 	"imagine=ImaJn",
 	"impossible=1posibl",
-	"indifférent  ID=1diféren",
+	"indifférent=1diféren",
 	"intéressé=1TreC",
 	"internet=net",
 	"inviter=1viT",
@@ -190,7 +189,7 @@ char *SMS[300] =
 	"nécessaire=néCsR",
 	"nerveux=nRvE",
 	"neuf=9",
-	"non=no nn",
+	"non=nn",
 	"nombre=nb",
 	"nombreux=nombrE",
 	"nous=ns",
@@ -221,7 +220,6 @@ char *SMS[300] =
 	"policier=keuf",
 	"poser=poz",
 	"pour=pr",
-	"pour moi=4me",
 	"pourquoi=pk",
 	"pourtant=prtan",
 	"pressé=preC",
@@ -254,7 +252,7 @@ char *SMS[300] =
 	"salut=slt",
 	"sans=100",
 	"savoir=savoar",
-	"semaine=semN sem",
+	"semaine=semN",
 	"serait=srai",
 	"série=Cri",
 	"sérieux=CriE",
@@ -273,7 +271,7 @@ char *SMS[300] =
 	"t'es=T",
 	"t'étais=TT",
 	"today=2day",
-	"toi=oit twa",
+	"toi=oit",
 	"toujours=tjr",
 	"tout=tt",
 	"train=tr1",
