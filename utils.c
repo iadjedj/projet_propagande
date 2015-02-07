@@ -6,7 +6,7 @@
 /*   By: iadjedj <iadjedj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 00:45:14 by iadjedj           #+#    #+#             */
-/*   Updated: 2015/02/04 02:03:13 by iadjedj          ###   ########.fr       */
+/*   Updated: 2015/02/06 18:05:26 by iadjedj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ void	censure(char *mot)
 	ft_putstr(mot);
 	ft_putnchar('\b', len);
 	ft_putstr("\033[37;40m");
-	usleep(60000);
+	usleep(80000);
 	while (len--)
 	{
-		usleep(30000);
+		usleep(50000);
 		ft_putchar(' ');
 	}
 	ft_putnchar(' ', len);
